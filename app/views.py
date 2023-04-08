@@ -1,5 +1,12 @@
 from django.shortcuts import render
+from django.http import HttpResponseRedirect
+
+from products.models import *
 
 # Create your views here.
 def index(request):
-    return render(request, "index.html")
+    Context = {}
+
+    Context['dataset'] = Product.objects.all()
+    
+    return render(request, "index.html", Context)

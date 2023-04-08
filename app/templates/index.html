@@ -1,15 +1,106 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/app.css' %}"/>
+    <title>E-commerce</title>
 </head>
 <body>
-    
+    <header>
+        <nav class="top-header">
+            <ul id="account">
+                <a><li>Sobre nós</li></a>
+                <a><li>Minha conta</li></a>
+                <a><li>Lista de desejos</li></a>
+            </ul>
+            <ul></ul>
+            <ul>
+                <a><li>Precisa de ajuda? Ligue: 800-800</li></a>
+                <a><li>Portugês</li></a>
+                <a><li>BRL</li></a>
+            </ul>
+        </nav>
+        <nav class="mid-header">
+            <h1 style="margin: auto;color: #5000ca;">Django E-commerce</h1>
+
+            <div class="search">
+                <input placeholder="Pesquise aqui..." id="search" type="text">
+                <div id="icon" style="background-image: url('{% static 'images/search.png' %}');"></div>
+            </div>
+            <div style="margin: auto;" id="account">
+                
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="first">
+            <aside>
+                <h2>Categorias</h2>
+                <ul>
+                    <a><li><div id="icon" style="background-image: url('{% static 'images/clothes.png' %}');"></div><span>Roupas</span></li></a>
+                    <a><li><div id="icon" style="background-image: url('{% static 'images/tech.png' %}');"></div><span>Informatica</span></li></a>
+                    <a><li><div id="icon" style="background-image: url('{% static 'images/acessories.png' %}');"></div><span>Acessórios</span></li></a>
+                    <a><li><div id="icon" style="background-image: url('{% static 'images/food.png' %}');"></div><span>Comidas</span></li></a>
+                </ul>
+            </aside>
+            <article>
+                <div class="product">
+                    <div class="image"></div>
+                    <h3>Titulo</h3>
+                    <span>PREÇO</span>
+                    <p style="margin-bottom: 1rem; font-size: 12px; color: gray;">À vista no pix</p>
+                    <button><div id="icon" style="background-image: url('{% static 'images/cart.png' %}');"></div><span id="text">COMPRAR</span></button>
+                </div>
+                <div class="product">
+                    <div class="image"></div>
+                    <h3>Titulo</h3>
+                    <span>PREÇO</span>
+                    <p style="margin-bottom: 1rem; font-size: 12px; color: gray;">À vista no pix</p>
+                    <button><div id="icon" style="background-image: url('{% static 'images/cart.png' %}');"></div><span id="text">COMPRAR</span></button>
+                </div>
+                <div class="product">
+                    <div class="image"></div>
+                    <h3>Titulo</h3>
+                    <span>PREÇO</span>
+                    <p style="margin-bottom: 1rem; font-size: 12px; color: gray;">À vista no pix</p>
+                    <button><div id="icon" style="background-image: url('{% static 'images/cart.png' %}');"></div><span id="text">COMPRAR</span></button>
+                </div>
+                <div class="product">
+                    <div class="image"></div>
+                    <h3>Titulo</h3>
+                    <span>PREÇO</span>
+                    <p style="margin-bottom: 1rem; font-size: 12px; color: gray;">À vista no pix</p>
+                    <button><div id="icon" style="background-image: url('{% static 'images/cart.png' %}');"></div><span id="text">COMPRAR</span></button>
+                </div>
+                <div class="product">
+                    <div class="image"></div>
+                    <h3>Titulo</h3>
+                    <span>PREÇO</span>
+                    <p style="margin-bottom: 1rem; font-size: 12px; color: gray;">À vista no pix</p>
+                    <button><div id="icon" style="background-image: url('{% static 'images/cart.png' %}');"></div><span id="text">COMPRAR</span></button>
+                </div>
+                <div class="product">
+                    <div class="image"></div>
+                    <h3>Titulo</h3>
+                    <span>PREÇO</span>
+                    <p style="margin-bottom: 1rem; font-size: 12px; color: gray;">À vista no pix</p>
+                    <button><div id="icon" style="background-image: url('{% static 'images/cart.png' %}');"></div><span id="text">COMPRAR</span></button>
+                </div>
+                <div class="product">
+                    <div class="image"></div>
+                    <h3>Titulo</h3>
+                    <span>PREÇO</span>
+                    <p style="margin-bottom: 1rem; font-size: 12px; color: gray;">À vista no pix</p>
+                    <button><div id="icon" style="background-image: url('{% static 'images/cart.png' %}');"></div><span id="text">COMPRAR</span></button>
+                </div>
+                
+            </article>
+        </section>
+    </main>
 </body>
 </html>
