@@ -7,6 +7,12 @@ from products.models import *
 def index(request):
     Context = {}
 
-    Context['dataset'] = Product.objects.all()
+    Context['product'] = Product.objects.all()
     
     return render(request, "index.html", Context)
+
+def category(request, category):
+    Context = {}
+    Context['product'] = Product.objects.filter(tags__exact=category)
+
+    return render(request, 'index.html', Context)

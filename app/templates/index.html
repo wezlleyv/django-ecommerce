@@ -42,63 +42,23 @@
             <aside>
                 <h2>Categorias</h2>
                 <ul>
-                    <a><li><div id="icon" style="background-image: url('{% static 'images/clothes.png' %}');"></div><span>Roupas</span></li></a>
-                    <a><li><div id="icon" style="background-image: url('{% static 'images/tech.png' %}');"></div><span>Informatica</span></li></a>
-                    <a><li><div id="icon" style="background-image: url('{% static 'images/acessories.png' %}');"></div><span>Acessórios</span></li></a>
-                    <a><li><div id="icon" style="background-image: url('{% static 'images/food.png' %}');"></div><span>Comidas</span></li></a>
+                    <a href="/category/clothes"><li><div id="icon" style="background-image: url('{% static 'images/clothes.png' %}');"></div><span>Roupas</span></li></a>
+                    <a href="/category/shoes"><li><div id="icon" style="background-image: url('{% static 'images/clothes.png' %}');"></div><span>Sapatos</span></li></a>
+                    <a href="/category/tech"><li><div id="icon" style="background-image: url('{% static 'images/tech.png' %}');"></div><span>Informatica</span></li></a>
+                    <a href="/category/acessories"><li><div id="icon" style="background-image: url('{% static 'images/acessories.png' %}');"></div><span>Acessórios</span></li></a>
+                    <a href="/category/food"><li><div id="icon" style="background-image: url('{% static 'images/food.png' %}');"></div><span>Comidas</span></li></a>
                 </ul>
             </aside>
             <article>
-                <div class="product">
-                    <div class="image"></div>
-                    <h3>Titulo</h3>
-                    <span>PREÇO</span>
-                    <p style="margin-bottom: 1rem; font-size: 12px; color: gray;">À vista no pix</p>
-                    <button><div id="icon" style="background-image: url('{% static 'images/cart.png' %}');"></div><span id="text">COMPRAR</span></button>
-                </div>
-                <div class="product">
-                    <div class="image"></div>
-                    <h3>Titulo</h3>
-                    <span>PREÇO</span>
-                    <p style="margin-bottom: 1rem; font-size: 12px; color: gray;">À vista no pix</p>
-                    <button><div id="icon" style="background-image: url('{% static 'images/cart.png' %}');"></div><span id="text">COMPRAR</span></button>
-                </div>
-                <div class="product">
-                    <div class="image"></div>
-                    <h3>Titulo</h3>
-                    <span>PREÇO</span>
-                    <p style="margin-bottom: 1rem; font-size: 12px; color: gray;">À vista no pix</p>
-                    <button><div id="icon" style="background-image: url('{% static 'images/cart.png' %}');"></div><span id="text">COMPRAR</span></button>
-                </div>
-                <div class="product">
-                    <div class="image"></div>
-                    <h3>Titulo</h3>
-                    <span>PREÇO</span>
-                    <p style="margin-bottom: 1rem; font-size: 12px; color: gray;">À vista no pix</p>
-                    <button><div id="icon" style="background-image: url('{% static 'images/cart.png' %}');"></div><span id="text">COMPRAR</span></button>
-                </div>
-                <div class="product">
-                    <div class="image"></div>
-                    <h3>Titulo</h3>
-                    <span>PREÇO</span>
-                    <p style="margin-bottom: 1rem; font-size: 12px; color: gray;">À vista no pix</p>
-                    <button><div id="icon" style="background-image: url('{% static 'images/cart.png' %}');"></div><span id="text">COMPRAR</span></button>
-                </div>
-                <div class="product">
-                    <div class="image"></div>
-                    <h3>Titulo</h3>
-                    <span>PREÇO</span>
-                    <p style="margin-bottom: 1rem; font-size: 12px; color: gray;">À vista no pix</p>
-                    <button><div id="icon" style="background-image: url('{% static 'images/cart.png' %}');"></div><span id="text">COMPRAR</span></button>
-                </div>
-                <div class="product">
-                    <div class="image"></div>
-                    <h3>Titulo</h3>
-                    <span>PREÇO</span>
-                    <p style="margin-bottom: 1rem; font-size: 12px; color: gray;">À vista no pix</p>
-                    <button><div id="icon" style="background-image: url('{% static 'images/cart.png' %}');"></div><span id="text">COMPRAR</span></button>
-                </div>
-                
+                {% for item in product %} 
+                    <div class="product">
+                        <div style="background-image: url('/{{item.image}}');" class="image"></div>
+                        <h3>{{item.title}}</h3>
+                        <span>{{item.price}}</span>
+                        <p style="margin-bottom: 1rem; font-size: 12px; color: gray;">À vista no pix</p>
+                        <button><div id="icon" style="background-image: url('{% static 'images/cart.png' %}');"></div><span id="text">COMPRAR</span></button>
+                    </div>
+                {% endfor %}
             </article>
         </section>
     </main>
