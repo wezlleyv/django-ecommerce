@@ -76,6 +76,13 @@ main aside {
     height: fit-content;
     background-color: white;
 }
+
+main aside a {
+    color: black;
+    text-decoration: none;
+    margin: auto;
+}
+
 main aside h2 {
     border-bottom: 4px solid #5000ca;
     width: fit-content;
