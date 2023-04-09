@@ -1,5 +1,7 @@
-from django.shortcuts import render
-from django.http import HttpResponseRedirect
+from django.shortcuts import render, redirect
+from django.http import HttpResponseRedirect,  HttpResponse
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib import messages
 
 from products.models import *
 
@@ -16,3 +18,21 @@ def category(request, category):
     Context['product'] = Product.objects.filter(tags__exact=category)
 
     return render(request, 'index.html', Context)
+
+def accountFormRegister(request):
+    form = UserCreationForm()
+
+    context = {'form': form}
+
+    return render(request, "accountReg.html", context)
+
+
+
+def regAccount(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+
+            messages.success(request, f'Your account has been created. You can log in now!')    
+            return HttpResponseRedirect('/login')
