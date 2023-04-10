@@ -21,7 +21,7 @@
                 {% endif%}
                 <a><li>Lista de desejos</li></a>
                 {% if user.is_authenticated %}
-                <a><li>Vender</li></a>
+                <a href="/products/create"><li>Vender</li></a>
                 {% endif %}
             </ul>
             <ul></ul>
@@ -62,7 +62,7 @@
                         {% if user.is_authenticated %}
                             <a><div style="background-image: url('{% static 'images/heart.png' %}');" id="wishlist-icon"></div></a>
                         {% endif%}
-                        <div style="background-image: url('/{{item.image}}');" class="image"></div>
+                        <div style="background-image: url('media/{{item.image}}');" class="image"></div>
                         <h3>{{item.title}}</h3>
                         <span>{{item.price}}</span>
                         <p style="margin-bottom: 1rem; font-size: 12px; color: gray;">À vista no pix</p>

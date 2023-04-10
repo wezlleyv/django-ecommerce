@@ -8,6 +8,7 @@ class Product(models.Model):
     quantity = models.IntegerField()
     image = models.ImageField(upload_to="uploads/", null=True, blank=True)
     tags = models.CharField(max_length=100)
+    owner = models.CharField(max_length=100, default="django")
 
     def __str__(self):
         return self.title

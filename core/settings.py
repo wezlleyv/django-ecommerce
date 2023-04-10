@@ -121,8 +121,8 @@ LOGIN_REDIRECT_URL = "home"
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = '/static/'
-MEDIA_URL = '/uploads/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
+MEDIA_URL = '/media/uploads/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media', 'uploads')
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "staticfiles")
