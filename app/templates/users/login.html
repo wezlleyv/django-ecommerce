@@ -1,8 +1,12 @@
+{% load static %}
 
-<form action="" method="POST">
-    {% csrf_token %}
-    {% for field in form %}
-        <p>{{ field.label }}: <br> {{ field }}</p>
-    {% endfor %}
-    <button type="submit">Login</button>
-</form>
+<link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+<main>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {% for field in form %}
+            <div id="label">{{ field.label }}: <br> {{ field }}</div>
+        {% endfor %}
+        <button id="login" type="submit">Login</button>
+    </form>
+</main>
