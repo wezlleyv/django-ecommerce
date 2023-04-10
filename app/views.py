@@ -22,6 +22,7 @@ def category(request, category):
 def myProducts(request):
     context = {}
     context['product'] = Product.objects.filter(owner__exact=request.user.username)
+    context['myProduct'] = True
 
     return render(request, 'index.html', context)
 

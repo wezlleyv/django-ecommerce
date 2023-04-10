@@ -66,6 +66,9 @@
                     <div class="product">
                         {% if user.is_authenticated %}
                             <a><div style="background-image: url('{% static 'images/heart.png' %}');" id="wishlist-icon"></div></a>
+                            {% if myProduct %}
+                                <a href="/products/delete/{{item.id}}"><div id="trash" style="background-image: url('{% static 'images/trash.png' %}');" ></div></a>
+                            {% endif %}
                         {% endif%}
                         <div style="background-image: url('/media/{{item.image}}');" class="image"></div>
                         <h3>{{item.title}}</h3>

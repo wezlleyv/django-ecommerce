@@ -163,6 +163,11 @@ main article .product:hover #wishlist-icon {
     
 }
 
+main article .product:hover #trash {
+    display: block;
+    
+}
+
 main article .product .image {
     width: 100px;
     height: 150px;
@@ -232,3 +237,17 @@ body {
     cursor: pointer;
 }
 
+#trash {
+    width: 30px;
+    height: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: absolute;
+    left: 1rem;
+    display: none;
+}
+
+#trash:hover {
+    cursor: pointer;
+}

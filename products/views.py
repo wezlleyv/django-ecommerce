@@ -29,3 +29,9 @@ def createProduct(request):
     else:
         return redirect("login")
     return render(request, "createProduct.html")
+
+def deleteProduct(request, _id):
+
+    product = Product.objects.filter(id__exact=_id)
+    product.delete()
+    return redirect('myproduct')
