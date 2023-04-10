@@ -42,6 +42,11 @@
                 
             </div>
         </nav>
+        {% if user.is_authenticated %}
+        <nav class="lower-header">
+            <a id="myproducts" href="/myproducts">Meus produtos</a>
+        </nav>
+        {% endif %}
     </header>
 
     <main>

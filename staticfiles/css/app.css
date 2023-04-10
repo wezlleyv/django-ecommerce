@@ -4,6 +4,7 @@
 }
 
 header .top-header {
+    box-shadow: 0px 0px 2px 1px rgba(0,0,0,.2);
     padding: 0.5rem;
     font-size: 13px;
     color: #7F858D;
@@ -60,6 +61,25 @@ header .mid-header .search #icon {
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+header .lower-header {
+    background-color: white;
+    box-shadow: 0px 0px 2px 1px rgba(0,0,0,.2);
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+header .lower-header #myproducts {
+    margin: auto;
+    text-decoration: none;
+    width: fit-content;
+    color: white;
+    border-radius: 10px;
+    padding: 0.8rem;
+    background: #5000ca;
+    font-size: 0.8rem;
 }
 
 main .first {
@@ -211,3 +231,4 @@ body {
 #wishlist-icon:hover {
     cursor: pointer;
 }
+

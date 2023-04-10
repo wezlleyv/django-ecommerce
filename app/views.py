@@ -19,6 +19,12 @@ def category(request, category):
 
     return render(request, 'index.html', Context)
 
+def myProducts(request):
+    context = {}
+    context['product'] = Product.objects.filter(owner__exact=request.user.username)
+
+    return render(request, 'index.html', context)
+
 def accountFormRegister(request):
     form = UserCreationForm()
 
