@@ -1,22 +1,23 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/products/create.css' %}">
     <title>Document</title>
 </head>
 <body>
-    <form action="" method="POST" enctype="multipart/form-data">
-        {% csrf_token %}
-        <input type="text" name="title" >
-        <input type="text" name="description">
-        <input type="number" name="price">
-        <input type="number" name="quantity">
-        <input type="file" name="image">
-        <input type="text" name="tags">
-        <input type="submit">
-    </form>
+    <main>
+        <form action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% for field in form %}
+            <div id="label">{{ field.label }}: <br> {{ field }}</div>
+            {% endfor %}    
+            <input id="createBtn" type="submit">
+        </form>
+    </main>
     
 </body>
 </html>

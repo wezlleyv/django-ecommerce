@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from django.contrib.auth import authenticate
 
 from .models import Product
+from .forms import ProductCreate
 
 # Create your views here.
 def createProduct(request):
@@ -25,10 +26,12 @@ def createProduct(request):
             product.save()
             return redirect("home")
     if request.user.is_authenticated:
-        pass
+
+        context = {'form': ProductCreate()}
+
+        return render(request, "createProduct.html", context)
     else:
         return redirect("login")
-    return render(request, "createProduct.html")
 
 def deleteProduct(request, _id):
 

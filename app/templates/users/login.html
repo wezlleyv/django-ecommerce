@@ -5,7 +5,7 @@
     <form action="" method="POST">
         {% csrf_token %}
         {% for field in form %}
-            <div id="label">{{ field.label }}: <br> {{ field }}</div>
+            <div id="label">{{ field.label }} {{ field }}</div>
         {% endfor %}
         <button id="login" type="submit">Login</button>
     </form>
