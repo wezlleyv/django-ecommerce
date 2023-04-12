@@ -26,6 +26,16 @@ def myProducts(request):
 
     return render(request, 'index.html', context)
 
+def searchDB(request):
+    if request.method == 'POST':
+        obj = request.POST.get("search")
+        
+        context = {}
+        context['product'] = Product.objects.filter(title__contains=obj)
+
+        return render(request, 'index.html', context)
+
+
 def accountFormRegister(request):
     form = UserCreationForm()
 
